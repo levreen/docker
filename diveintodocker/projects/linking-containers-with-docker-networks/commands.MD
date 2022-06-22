@@ -25,13 +25,13 @@ docker stop >docker-container-name<
 ## Inspect docker container network using redis/container-web-name
 ```
 docker exec redis ifconfig
-```
-## OR
+``` 
+#### OR
 ```
 docker exec web2 ifconfig
 ```
 *web2 change it to your docker image
-### *Note: at the Dockerfile add on the RUN command 
+#### *Note: at the Dockerfile add on the RUN command 
 ```
 RUN apk update & apk add iputils
 ```
