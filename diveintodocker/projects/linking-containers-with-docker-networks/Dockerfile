@@ -3,6 +3,7 @@
 #             You can also use python:3.7.5-slim-buster for a Debian image
 FROM python:3.7.5-alpine
 
+RUN apk update && apk add iputils
 RUN mkdir /app
 WORKDIR /app
 
