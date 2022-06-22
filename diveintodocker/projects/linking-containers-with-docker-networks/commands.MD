@@ -12,6 +12,7 @@ docker network ls
 ```
 docker network inspect
 ```
+***you can add the specific network you want to inspect**
 ## Run redis 
 ```
 docker container run --rm -itd -p 6379:6379 --name redis redis:3.2-alpine
@@ -30,9 +31,33 @@ docker exec redis ifconfig
 ```
 docker exec web2 ifconfig
 ```
-*web2 change it to your docker image
+***web2 change it to your docker image***
 ###### *Note: at the Dockerfile add on the RUN command 
 ```
 RUN apk update & apk add iputils
 ```
+## Using exec
+```
+docker exec redis cat /etc/hosts
+```
 
+## Redis cli
+```
+docker exec -it redis redis-cli
+```
+
+## Run Docker Volume
+```
+docker volume create >name-of-your-container<
+```
+
+## Run redis with volume
+```
+docker container run --rm -itd -p 6379:6379 --name redis --net firstnetwork -v web2_redis:/data redis:3.2-alpine                                   
+```
+
+## Redis commond to have persistence memory
+```
+docker exec redis redis-cli SAVE
+```
+***know where the data resides***
