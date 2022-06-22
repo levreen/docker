@@ -6,8 +6,9 @@ docker image build -t web1 .
 
 ### Running docker container after docker build
 ```
-docker container run -it -p 5000:5000 -e FLASK_APP=app.py --rm --name web1 -e FLASK_DEBUG=1 -v C:\Users\arden\docker\diveintodocker\projects\creating-docker-file:/app web1
+docker container run -it -p 5000:5000 -e FLASK_APP=app.py --rm --name web1 -e FLASK_DEBUG=1 -v C:\Users\***\***\***\***:/app web1
 ```
+Directory to your docker files
 
 ### Debug docker container
 ```
